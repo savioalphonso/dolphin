@@ -1,6 +1,6 @@
 package ca.sitkalabs.radar.Models.app;
 
-import ca.sitkalabs.radar.Downloader.AppDownloader;
+import ca.sitkalabs.radar.Downloader.DownloaderSubscriber;
 
 public interface App<ID>  {
 
@@ -8,5 +8,5 @@ public interface App<ID>  {
     String getPackageName();
     ID getVersion();
     void setNewVersion(ID newVersion);
-    void acceptDownloader(AppDownloader downloader);
+    void registerDownloader(DownloaderSubscriber downloader);
 }

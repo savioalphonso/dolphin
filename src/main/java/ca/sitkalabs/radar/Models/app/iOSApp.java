@@ -1,5 +1,6 @@
 package ca.sitkalabs.radar.Models.app;
 
+import ca.sitkalabs.radar.Downloader.DownloaderSubscriber;
 import ca.sitkalabs.radar.Models.packages.IOSAppPackage;
 
 import java.util.List;
@@ -26,7 +27,7 @@ public class iOSApp implements App<String>{
     }
 
     @Override
-    public List<IOSAppPackage> getAppFiles() {
-        return null;
+    public void registerDownloader(DownloaderSubscriber downloader) {
+
     }
 }

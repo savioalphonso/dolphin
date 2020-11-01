@@ -1,6 +1,6 @@
 package ca.sitkalabs.radar.Models.app;
 
-import ca.sitkalabs.radar.Downloader.AppDownloader;
+import ca.sitkalabs.radar.Downloader.DownloaderSubscriber;
 
 public class AndroidApp implements App<Integer> {
 
@@ -45,7 +45,7 @@ public class AndroidApp implements App<Integer> {
     }
 
     @Override
-    public void acceptDownloader(AppDownloader downloader) {
+    public void registerDownloader(DownloaderSubscriber downloader) {
         downloader.download(this);
     }
 

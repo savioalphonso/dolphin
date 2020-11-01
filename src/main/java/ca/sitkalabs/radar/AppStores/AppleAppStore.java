@@ -1,18 +1,14 @@
 package ca.sitkalabs.radar.AppStores;
 
-import ca.sitkalabs.radar.Models.device.Device;
+import ca.sitkalabs.radar.Models.device.VirtualDevice;
 import ca.sitkalabs.radar.Models.packages.AppPackageFile;
 import ca.sitkalabs.radar.Models.store.AppDetails;
 
 import java.util.List;
 import java.util.Map;
 
-public class AppleAppStore implements StoreAPI{
+public class AppleAppStore implements StoreAPI<String>{
 
-    @Override
-    public List<? extends AppPackageFile> download(String packageName) {
-        return null;
-    }
 
     @Override
     public AppDetails getAppDetails(String packageName) {
@@ -20,7 +16,7 @@ public class AppleAppStore implements StoreAPI{
     }
 
     @Override
-    public <T> T getLatestVersion() {
+    public String getLatestVersion() {
         return null;
     }
 
@@ -30,7 +26,7 @@ public class AppleAppStore implements StoreAPI{
     }
 
     @Override
-    public void spoof(Device device) {
+    public void spoof(VirtualDevice device) {
 
     }
 
